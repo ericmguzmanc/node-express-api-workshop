@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // 🔗 Request log
 app.use((req, res, next) => {
-  console.log(`${new Date().toString()} => ${req.originalUrl}`, req.body);
+  console.log(`\x1b[36m%s\x1b[0m${new Date().toString()} => ${req.originalUrl}`, req.body);
   next();
 });
 
